@@ -1,7 +1,7 @@
 # dockerhub-push pushes docker build to dockerhub automatically
 # on the creation of a new release
 name: Publish to Dockerhub on creation of a new release
-on: 
+on:
   release:
     types: [published]
 jobs:
@@ -12,6 +12,6 @@ jobs:
     - name: Publish to Dockerhub Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: ice3man/subfinder
+        name: projectdiscovery/subfinder
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
